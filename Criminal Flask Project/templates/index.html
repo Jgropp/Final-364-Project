@@ -1,0 +1,21 @@
+{% from "_formhelpers.html" import render_field %}
+<html>
+<head>
+<title>WTForms</title>
+</head>
+<body>
+	<form method="POST" action="/">
+	   <dl>
+	    {{ loginform.csrf_token }}
+	    {{ render_field(loginform.username) }}
+	    {{ render_field(loginform.password) }}
+	    <input type="submit" value="Login">
+	    </dl>
+	</form>
+	
+	</br>
+	</br>
+	</br>
+	<a href = "/signup" style="border-style: solid;padding:10px; margin-left:600px;">Signup</a> </br>  
+</body>
+</html>
